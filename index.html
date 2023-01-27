@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>homepage-not-logged-in</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "icon" href = "pages/img/icon.ico" type = "image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <style>
+            body{
+                width: 100%;
+                background-color: white;
+            }
+            nav.orig{
+                width: 100%;
+                background-color: #fff;
+                height: 70px;
+                margin-top: 0;
+                padding: 5px;
+                position: fixed;
+                top:0;
+                box-shadow: 0px 5px 5px 0px rgba(203, 198, 198, 0.2);
+            }
+            nav.phone{
+                display: none;
+            }
+            #container{
+                width: 100%;
+                padding-bottom: 50px;
+                background-color: #fff;
+            }
+            #content{
+                width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #container2{
+                width: 100%;
+                background-color: #bed1d4;
+                padding-bottom: 50px;
+            }
+            #content2{
+                width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #container3{
+                width: 100%;
+                padding-bottom: 50px;
+                background-color: #cce6ea;
+            }
+            #content3{
+                width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #containerfooter{
+                width: 100%;
+                padding-bottom: 50px;
+                background-color: #1e1f1e;
+            }
+            #contentfooter{
+                margin-left: auto;
+                margin-right: auto;
+                width: 85%;
+                color: #fff;
+            }
+            .imgplcholder{
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+                background: url(pages/img/imgindexpage.png) no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 600px;
+                border-radius: 5px;
+            }
+            .leftcol, .rightcol{
+                float: left;
+                width: 50%;
+                padding: 0;
+                margin-top: 50px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            table.announce{
+                width: 100%;
+                padding: 2em;
+                margin-top: 50px;
+                border-collapse: separate !important;
+                border-spacing: 0;
+            }
+            table.loginleft{
+                width: 100%;
+                height: auto;
+                font-style: normal;
+                border-collapse: separate !important;
+                border-spacing: 0;
+                padding: 2em;
+            }
+            table.loginright{
+                width: 100%;
+                height: 100%;
+                font-style: normal;
+                border-collapse: separate !important;
+                border-spacing: 0;
+                padding: 2em;
+                border-left: 2px solid rgba(41, 38, 38, 0.5);
+            }
+            table.footertext{
+                width: 100%;
+                padding: 2em;
+                float: left;
+                border-collapse: separate !important;
+                border-spacing: 0;
+            }
+            h2{
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
+            }
+            p{
+                font-family: 'Roboto', sans-serif;
+                font-weight: lighter;
+            }
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 15px;
+            }
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+            a{
+                text-decoration: none;
+                color:#000;
+                font-weight: 600;
+            }
+            a:hover{
+                text-decoration: underline;
+                color: rgb(53, 85, 154);
+            }
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 2px solid rgba(203, 198, 198, 0.2);
+                border-radius: 10px;
+                box-sizing: border-box;
+                font-family: 'Roboto', sans-serif;
+            }
+            .buttonlogin{
+                width: 100%;
+                background-color: #3857b5;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: 2px solid rgba(64, 65, 173, 0.2);
+                border-radius: 10px;
+                font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+                display: block;
+                text-align: center;
+                font-weight: 400;
+            }
+            .buttongoogle{
+                width: 100%;
+                background-color: #fff;
+                color: #000;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: 2px solid rgba(203, 198, 198, 0.2);
+                border-radius: 10px;
+                font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+                display: block;
+                text-align: center
+            }
+            .buttonlogin:hover{
+                background-color: #25376e;
+                font-family: 'Roboto', sans-serif;
+                text-decoration: none;
+                color: white;
+            }
+            .buttongoogle:hover{
+                background-color: rgb(216, 209, 209);
+                color: #000;
+                font-family: 'Roboto', sans-serif;
+                text-decoration: none;
+            }
+            .lostpassword{
+                color: #000;
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+                display: block;
+                font-weight: lighter;
+                margin-top: 10px;
+            }
+            .lostpassword:hover{
+                color: #000;
+                text-decoration: underline;
+            }
+            .easteregg{
+                display: none;
+            }
+            .collapsible {
+                background-color: #8ab0b6;
+                color: #000000;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                font-family: 'Roboto';
+            }
+
+            .active, .collapsible:hover {
+                background-color: #94adb0;
+            }
+
+            .schopledge {
+                padding: 0 1em;
+                height: auto;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                background-color: #f1f1f1;
+            }
+            @media screen and (min-width: 768px) and (max-width: 1023px){
+                nav.phone{
+                    display: none;
+                }
+                #content{
+                    width: 90%;
+                }
+                #content2{
+                    width: 90%;
+                }
+                #content3{
+                    width: 90%;
+                }
+                #contentfooter{
+                    width: 90%;
+                }
+                .leftcol{
+                    width: 100%;
+                    float: none;
+                    padding: 5px;
+                }
+                .rightcol{
+                    width: 100%;
+                    float: none;
+                    padding: 5px;
+                    margin-top: 0;
+                }
+                table.loginleft{
+                    width: 100%;
+                    height: auto;
+                    font-style: normal;
+                    border-collapse: separate !important;
+                    border-spacing: 0;
+                    padding: 1%;
+                    border-bottom: 2px solid rgba(41, 38, 38, 0.5);
+                }
+                table.loginright{
+                    width: 100%;
+                    height: 100%;
+                    font-style: normal;
+                    border-collapse: separate !important;
+                    border-spacing: 0;
+                    padding: 1%;
+                    border-left: none;
+                }
+            }
+            @media screen and (max-width: 767px){
+                nav.orig{
+                    display: none;
+                }
+                nav.phone{
+                    display: block;
+                    width: 100%;
+                    background-color: #fff;
+                    height: 70px;
+                    margin-top: 0;
+                    padding: 20px;
+                    position: fixed;
+                    top:0;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    box-shadow: 0px 5px 5px 0px rgba(203, 198, 198, 0.2);
+                }
+                #content{
+                    width: 95%;
+                }
+                #content2{
+                    width: 95%;
+                }
+                #content3{
+                    width: 95%;
+                }
+                #contentfooter{
+                    width: 95%;
+                }
+                .leftcol, .rightcol{
+                    float: none;
+                    width: 100%;
+                    padding: 0;
+                }
+                table.loginleft{
+                    width: 100%;
+                    height: auto;
+                    font-style: normal;
+                    border-collapse: separate !important;
+                    border-spacing: 0;
+                    padding: 1%;
+                    border-bottom: 2px solid rgba(41, 38, 38, 0.5);
+                }
+                table.loginright{
+                    width: 100%;
+                    height: 100%;
+                    font-style: normal;
+                    border-collapse: separate !important;
+                    border-spacing: 0;
+                    padding: 1%;
+                    border-left: none;
+                    margin-top: 15px;
+                }   
+            }
+            @media screen and (min-width: 5000px){
+                .easteregg{
+                    display: block;
+                    width: 126px;
+                    height: 180px;
+                    background-color: gold;
+                    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                }
+                nav.orig{
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <div class="row"> 
+                <nav class="orig">
+                    <a href="index.html">&nbsp;<img src="pages/img/top-logo.png" alt="logo" style="height: 100%;"></a>
+                    &nbsp;&nbsp;
+                    <a href="index.html">Home</a>
+                    <a href="#LogIn" style="float: right; padding: 15px;">Log In</a>
+                </nav>
+                <nav class="phone">
+                    &nbsp;
+                    <a href="index.html">Home</a>
+                    <a href="#LogIn" style="float: right;">Log n&nbsp;</a> 
+                </nav>
+                <div class="easteregg" title="You found Egg, share this with the hashtag '#egginmyhtml'"></div>
+            <div id="container">
+                <div id="content">
+                    <div class="imgplcholder">
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+            <div id="container2">
+                <div id="content2">
+                    <div class="leftcol">
+                        <table class="loginleft">
+                            <tr>
+                                <td>
+                                    <h2>Welcome to PSHS-CLC Knowledge Hub!</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>For students and faculty, please click the Google button and select / type in your PSHS-provided email address and your password. There is no need to type inside the username and password fields
+                                    <br><br>
+                                    For guests, please log-in using your given username and password by typing them in the username and password fields.
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="rightcol">
+                        <table class="loginright">
+                            <tr>
+                                <td>
+                                    <h2 id="LogIn"><span title="Yes, this is an easter egg. Bragging rights, I guess">Log</span> in with your password</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        <input type="text" id="fname" name="firstname" placeholder="Username or Email">
+                                        <input type="password" id="lname" name="lastname" placeholder="Password">
+                                        <a href="pages/logged-in-page.html" class="buttonlogin">Log In</a>
+                                        <a href="#" class="lostpassword"> Forgot password? </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br><br></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2>
+                                        Sign in with Google
+                                    </h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="buttongoogle" href="pages/logged-in-page.html"> <img src=pages/img/google.png alt="google" style="height: 25px; width: 25px; padding: 2px;">&nbsp; Google </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="container3">
+                <div id="content3">
+                        <table class="announce">
+                        <tr>
+                            <td>
+                                <h2>Site Announcements</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>No site announcements have been made.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="collapsible"><span style="font-weight: 1000;">PSHS Scholar's Pledge</span></button>
+                        <div class="schopledge">
+                        <p><br>[Raise your right hand]
+                            <br><br>
+                            I am a Philippine Science High School Scholar.
+                            <br><br>
+                            Committed to the pursuit of excellence, foremost in my academic life and later, in my service to the Filipino people, to whom I owe the gift of my education and to whose uplift I must dedicate my God-given talents and acquired expertise in science and technology.
+                            <br><br>
+                            I envision myself as creative, inventive and innovative, taking the lead in initiating positive changes that will enrich my school, my community and Philippine society.
+                            <br><br>
+                            As a scholar, I embody the scientific spirit - inquisitive, logical, analytical and critical - but also equally imbued with the humanist values of justice and compassion, prudence, integrity and humility.
+                            <br><br>
+                            I am committed to the perpetuation of the human race and the preservation of the universe that is its home.
+                            <br><br>
+                            I finally envision myself as actively professing and operationalizing love of God, country, others, and self in all my goals, activities and achievements.</p>
+                            <img title="Hi" src="pages/img/crepehi.png" style="height:50px; width: auto; float: right;" alt="hi">
+                        </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="containerfooter">
+                <div id="contentfooter">
+                    <table class="footertext">
+                        <tr>
+                            <td>
+                                <a href="pages/author.html" style="color: #fff;">Authors</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://khub.clc.pshs.edu.ph" style="color: #fff;">Actual Khub</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Contact Details:<br>+6390--------<br>help--------@gmail.com</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+    </body>
+</html>

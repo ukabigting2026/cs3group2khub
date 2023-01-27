@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grades</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <style>
+            body{
+                width: 100%;
+                background-color: #f2f2f2;
+            }
+            nav.orig{
+                width: 100%;
+                background-color: #fff;
+                height: 70px;
+                margin-top: 0;
+                padding: 5px;
+                position: fixed;
+                top:0;
+                box-shadow: 0px 5px 5px 0px rgba(203, 198, 198, 0.2);
+            }
+            nav.phone{
+                display: none;
+            }
+            img.round{
+                border-radius: 25px;
+            }
+            #container{
+                width: 100%;
+                padding-top: 100px;
+                padding-bottom: 50px;
+            }
+            #content{
+                width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 15px;
+                background-color: #FFF;
+                padding: 2em;
+            }
+            #containerfooter{
+                width: 100%;
+                padding-bottom: 50px;
+                background-color: #1e1f1e;
+                height: 207px;
+            }
+            #contentfooter{
+                margin-left: auto;
+                margin-right: auto;
+                width: 85%;
+                color: #fff;
+            }
+            table.one{
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 4em;
+                font-family: 'Roboto', sans-serif;
+            }
+            table.footertext{
+                width: 100%;
+                padding: 2em;
+                float: left;
+                border-collapse: separate !important;
+                border-spacing: 0;
+            }
+            h2{
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
+            }
+            p{
+                font-family: 'Roboto', sans-serif;
+                font-weight: lighter;
+            }
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 15px;
+            }
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+            a{
+                text-decoration: none;
+                color:#000;
+                font-weight: 600;
+            }
+            a:hover{
+                text-decoration: underline;
+                color: rgb(53, 85, 154);
+            }
+            .easteregg{
+                display: none;
+            }
+            th{
+                border-bottom: 1px solid #000;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            @media screen and (min-width: 768px) and (max-width: 1023px){
+                nav.phone{
+                    display: none;
+                }
+                #content{
+                    width: 90%;
+                }
+                #contentfooter{
+                    width: 90%;
+                }
+            }
+            @media screen and (max-width: 767px){
+                nav.orig{
+                    display: none;
+                }
+                nav.phone{
+                    display: block;
+                    width: 100%;
+                    background-color: #fff;
+                    height: 70px;
+                    margin-top: 0;
+                    padding: 20px;
+                    position: fixed;
+                    top:0;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    box-shadow: 0px 5px 5px 0px rgba(203, 198, 198, 0.2);
+                }
+                #content{
+                    width: 95%;
+                }
+                #contentfooter{
+                    width: 95%;
+                }
+            }
+            @media screen and (min-width: 5000px){
+                .easteregg{
+                    display: block;
+                    width: 126px;
+                    height: 180px;
+                    background-color: gold;
+                    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                }
+                nav.orig{
+                    display: none;
+                }
+            }
+        </style>
+
+    </head>
+
+<body class="container-fluid">
+    <div class="row">
+        <nav class="orig">
+            <a href="logged-in-page.html">&nbsp;<img src="img/top-logo.png" alt="logo" style="height: 100%;"></a>
+            &nbsp;&nbsp;
+            <a href="logged-in-page.html">Home</a>
+            &nbsp;&nbsp;
+            <a href="#">Grades</a>
+        </nav>
+        <nav class="phone">
+            &nbsp;
+            <a href="../index.html">Home</a>
+        </nav>
+        <div id="container">
+            <div id="content">
+                <h5>Grades</h5>
+                    <table class="one">
+                        <thead>
+                            <tr>
+                                <th scope="col">Subject</th>
+                                <th scope="col">Weight</th>
+                                <th scope="col">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Biology</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Chemistry</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Computer Science</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">English</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Filipino</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Health</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mathematics</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Music</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Physical Education</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Physics</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Social Science</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Statistics</th>
+                                <th>1.00</th>
+                                <th>-</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="containerfooter">
+                <div id="contentfooter">
+                    <table class="footertext">
+                        <tr>
+                            <td>
+                                <a href="authorloggedin.html" style="color: #fff;">Authors</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://khub.clc.pshs.edu.ph" style="color: #fff;">Actual Khub</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Contact Details:<br>+6390--------<br>help--------@gmail.com</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>author</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "icon" href = "img/icon.ico" type = "image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <style>
+            body{
+                width: 100%;
+                background-color: #f2f2f2;
+            }
+            nav.orig{
+                width: 100%;
+                background-color: #fff;
+                height: 70px;
+                margin-top: 0;
+                padding: 5px;
+                position: fixed;
+                top:0;
+                box-shadow: 0px 5px 5px 0px rgba(203, 198, 198, 0.2);
+            }
+            nav.phone{
+                display: none;
+            }
+            img.round{
+                border-radius: 25px;
+            }
+            #container{
+                width: 100%;
+                padding-top: 100px;
+                padding-bottom: 50px;
+            }
+            #content{
+                width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #containerfooter{
+                width: 100%;
+                padding-bottom: 50px;
+                background-color: #1e1f1e;
+                bottom: 0;
+                position: absolute;
+            }
+            #contentfooter{
+                margin-left: auto;
+                margin-right: auto;
+                width: 85%;
+                color: #fff;
+            }
+            table.one{
+                width: 100%;
+                border-radius: 15px;
+                background-color: #FFF;
+                padding: 2em;
+                border-collapse: separate !important;
+                border-spacing: 0;
+            }
+            h2{
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
+            }
+            p{
+                font-family: 'Roboto', sans-serif;
+                font-weight: lighter;
+            }
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 15px;
+            }
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+            a{
+                text-decoration: none;
+                color:#000;
+                font-weight: 600;
+            }
+            a:hover{
+                text-decoration: underline;
+                color: rgb(53, 85, 154);
+            }
+            .easteregg{
+                display: none;
+            }
+            @media screen and (min-width: 768px) and (max-width: 1023px){
+                nav.phone{
+                    display: none;
+                }
+                #content{
+                    width: 90%;
+                }
+                #contentfooter{
+                    width: 90%;
+                }
+            }
+            @media screen and (max-width: 767px){
+                nav.orig{
+                    display: none;
+                }
+                nav.phone{
+                    display: block;
+                    width: 100%;
+                    background-color: #fff;
+                    height: 70px;
+                    margin-top: 0;
+                    padding: 20px;
+                    position: fixed;
+                    top:0;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    box-shadow: 0px 5px 5px 0px rgba(203, 198, 198, 0.2);
+                }
+                #content{
+                    width: 95%;
+                }
+                #contentfooter{
+                    width: 95%;
+                }
+            }
+            @media screen and (min-width: 5000px){
+                .easteregg{
+                    display: block;
+                    width: 126px;
+                    height: 180px;
+                    background-color: gold;
+                    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+                }
+                nav.orig{
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <div class="row"> 
+                <nav class="orig">
+                    <a href="../index.html">&nbsp;<img src="img/top-logo.png" alt="logo" style="height: 100%;"></a>
+                    &nbsp;&nbsp;
+                    <a href="../index.html">Home</a>
+                    &nbsp;&nbsp;
+                    <a href="grades.html">Grades</a>
+                </nav>
+                <nav class="phone">
+                    &nbsp;
+                    <a href="../index.html">Home</a>
+                </nav>
+                <div id="container">
+                    <div id="content">
+                        <table class="one">
+                            <tr>
+                                <th>
+                                    <p><span style=font-weight:bolder;font-size:xx-large;>Authors:</span><br>
+                                    Uno Andrei Kabigting <img class="round" src="img/uno.png" alt="uno"><br>
+                                    Paula Mae Cantara <img class="round" src=img/alexis.jpg alt="paula"><br>
+                                    Sophia Clark <img class="round" src=img/sophia.jpg alt="sophia"><br>
+                                    Astrid Victoria Ong <img class="round" src="img/astrid.jpg" alt="astrid"><br>
+                                    Mervin Zuniega <img class="round" src="img/mervin.jpg" alt="mervin">
+                                    </p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <p></p>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        </div>
+
+    </body>
+</html>
